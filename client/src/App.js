@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import logo from './BlindDogYarns-logo2.png';
 import './App.css';
-import ApolloClient, { createNetworkInterface } from 'apollo-client';
-import { ApolloProvider } from 'react-apollo';
-import { PatternList } from './PatternList'
+import Router from './Router'
 
-const client = new ApolloClient({
-  networkInterface: createNetworkInterface({
-    uri: '/',
-  })
-});
+
 
 class App extends Component {
   state = {
@@ -34,19 +28,12 @@ class App extends Component {
 
   render() {
     return (
-        <ApolloProvider client={client}>
-          <div className="App">
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-            </header>
-            <div className="App-container">
-              <div className="App-content">
-                <PatternList />
-              </div>
-            </div>
-          </div>
-        </ApolloProvider>
-
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
+        <Router />
+      </div>
     );
   }
 }

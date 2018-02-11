@@ -31,6 +31,9 @@ const graphQLQuery = gql`
       title
       url
     }
+    sys {
+      id
+    }
   }
 }
 `

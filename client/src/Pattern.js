@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo';
 
 let Pattern = class Pattern extends Component {
@@ -20,7 +21,7 @@ let Pattern = class Pattern extends Component {
           <img alt={pattern.title} src={`${pattern.picture.url}?w=200&h=200&fit=fill`} />
           <h1>{pattern.title}</h1>
         </div>
-        <h4>Recommended Hook Size: {pattern.hookSize}</h4>
+        <h4>{`Recommended Hook Size: ${pattern.hookSize}`}</h4>
         <p> {pattern.steps} </p>
       </div>
     )
@@ -28,21 +29,31 @@ let Pattern = class Pattern extends Component {
 }
 
 const graphQLQuery = gql`
-{
-  pattern(id="") {
-    title
-    hookSize
-    steps
-    picture {
+  query PatternQuery($id: ID!) {
+    pattern(id:$id) {
       title
-      url
+      hookSize
+      steps
+      picture {
+        title
+        url
+      }
+      sys {
+        id
+      }
     }
   }
-}
 `
 
-const getGraphQLEnhancedComponent = graphql(graphQLQuery);
+const getGraphQLEnhancedComponent = graphql(graphQLQuery, {
+  options: (ownProps) => ({
+    variables: {
+      id: ownProps.match.params.id
+    }
+  })
+})
 
-Pattern = getGraphQLEnhancedComponent(Pattern)
+
+Pattern = getGraphQLEnhancedComponent(withRouter(Pattern))
 
 export { Pattern }
