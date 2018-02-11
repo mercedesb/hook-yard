@@ -1,11 +1,12 @@
 const express = require('express');
 const cfGraphql = require('cf-graphql');
 const graphqlHTTP = require('express-graphql');
+const config = require('./config.json');
 
 const port = process.env.PORT || 5000;
-const spaceId = process.env.SPACE_ID;
-const cdaToken = process.env.CDA_TOKEN;
-const cmaToken = process.env.CMA_TOKEN;
+const spaceId = process.env.SPACE_ID || config.spaceId;
+const cdaToken = process.env.CDA_TOKEN || config.cdaToken;
+const cmaToken = process.env.CMA_TOKEN || config.cmaToken;
 
 if (spaceId && cdaToken && cmaToken) {
   console.log('Space ID, CDA token and CMA token provided');
