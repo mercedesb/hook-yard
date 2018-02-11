@@ -1,0 +1,26 @@
+{
+  "name": "hook-yard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mercedesb/hook-yard.git"
+  },
+  "author": "Mercedes Bernard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mercedesb/hook-yard/issues"
+  },
+  "homepage": "https://github.com/mercedesb/hook-yard#readme",
+  "dependencies": {
+    "cf-graphql": "^0.5.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "react-apollo": "^2.0.4"
+  }
+}
