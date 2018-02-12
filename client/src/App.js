@@ -4,7 +4,6 @@ import './App.css';
 import Router from './Router'
 
 
-
 class App extends Component {
   state = {
     response: ''
