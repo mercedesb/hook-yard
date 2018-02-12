@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Pattern } from './Pattern'
-import Home from './Home'
+import { Pattern } from './Pattern/Pattern'
+import Home from './Home/Home'
 
 class NoMatch extends Component {
   render () {
