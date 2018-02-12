@@ -1,0 +1,17 @@
+.PatternList {
+  display: flex;
+  align-items: center;
+}
+
+.PatternList-item {
+  display: flex;
+  align-items: center;
+}
+
+.PatternList-item img {
+  margin: 40px;
+}
+
+.PatternList-detail {
+
+}

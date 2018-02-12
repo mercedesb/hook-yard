@@ -28,10 +28,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        <nav className="App-nav">
           <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <Router />
+        </nav>
+        <div className="App-content">
+          <Router />
+        </div>
       </div>
     );
   }

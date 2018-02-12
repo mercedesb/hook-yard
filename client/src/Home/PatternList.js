@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { gql, graphql } from 'react-apollo';
-import PatternRow from './PatternRow'
+import { gql, graphql } from 'react-apollo'
+import { Link } from 'react-router-dom'
+import './PatternList.css';
 
 let PatternList = class PatternList extends Component {
 
@@ -16,8 +17,22 @@ let PatternList = class PatternList extends Component {
     }
 
     return (
-      <div className='pattern-list'>
-        { patterns.map( ptn => <PatternRow key={ptn.title} pattern={ptn} />) }
+      <div className='PatternList'>
+        { patterns.map( pattern => {
+          return (
+          <div className='PatternList-item'>
+            <img alt={pattern.title} src={`${pattern.picture.url}?w=200&h=200&fit=fill`} />
+            <div className="PatternList-detail">
+              <h2>
+                <Link to={`/patterns/${pattern.sys.id}`}>
+                  {pattern.title}
+                </Link>
+              </h2>
+            </div>
+          </div>
+          )
+        })
+       }
       </div>
     )
   }
