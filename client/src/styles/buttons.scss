@@ -1,0 +1,38 @@
+@import 'styles/variables.scss';
+
+$button-padding: 12px 15px;
+$button-margin: 15px 12px 15px 0;
+$base-button-color: $dark-brown;
+$button-spacing: $base-spacing;
+$base-border-radius: 7px;
+
+button, .button {
+  display: inline-block;
+  appearance: none;
+  background-color: $base-button-color;
+  border: 2px solid $base-button-color;
+  border-radius: $base-border-radius;
+  color: $white;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  font-size: $medium-font-size;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  margin: $button-spacing;
+  padding: $button-spacing;
+  /*transition: background-color $base-duration $base-timing;*/
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: lighten($base-button-color, 10%);
+    border-color: lighten($base-button-color, 10%);
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

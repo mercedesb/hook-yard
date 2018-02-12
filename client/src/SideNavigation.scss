@@ -1,0 +1,14 @@
+@import 'styles/variables.scss';
+
+.SideNavigation {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  font-size: 24px;
+  margin-left: $base-spacing;
+
+  &-link {
+    color: $white;
+  }
+}

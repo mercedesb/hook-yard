@@ -1,45 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #444545;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444545;
+  line-height: 1;
+  font-size: 14px; }
+
+a {
+  color: #4e3d42;
+  text-decoration: none; }
+
 .App {
   display: flex;
-}
+  height: 100%; }
 
 .App-nav {
-  color: white;
   display: flex;
   flex-direction: column;
   width: 300px;
   min-width: 300px;
   background-color: #B29772;
-}
+  padding-top: 20px; }
 
 .App-content {
+  display: flex;
   flex-direction: column;
   flex: 1 1 0%;
-}
+  background-color: #f7f7f6; }
 
 .App-logo {
-  /*height: 100px;*/
-}
-
-
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.App-container {
-  display: flex;
-  align-items: center;
-}
-
-.App-content {
-
-}
-
-
-.pattern-row .pattern-detail {
-
-}
+  width: 100%; }

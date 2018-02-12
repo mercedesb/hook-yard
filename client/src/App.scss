@@ -1,0 +1,42 @@
+@import 'styles/variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $black;
+  font-family: $base-font-family;
+  color: $base-font-color;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+}
+
+a {
+  color: $dark-brown;
+  text-decoration: none;
+}
+
+.App {
+  display: flex;
+  height: 100%;
+}
+
+.App-nav {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 300px;
+  background-color: $kraft-brown;
+  padding-top: $base-spacing;
+}
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  background-color: $eggshell;
+}
+
+.App-logo {
+  width: 100%;
+}
+

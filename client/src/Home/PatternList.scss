@@ -1,0 +1,48 @@
+@import 'styles/variables.scss';
+
+.PatternList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.PatternList-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $base-spacing;
+  background-color: $gray;
+}
+
+.PatternList-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: $base-spacing;
+  margin-left: $base-spacing;
+
+}
+
+.PatternList-img {
+  flex: 1;
+}
+
+.PatternList-detail {
+  margin-left: $base-spacing;
+  flex: 2;
+}
+
+.PatternList-difficulty {
+  display: flex;
+}
+
+.PatternList-sheep {
+  width:40px;
+  color: $dark-brown;
+  fill: currentColor;
+
+  div {
+    width: 100%;
+  }
+}
+

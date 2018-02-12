@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo';
+import './Pattern.css';
 
 let Pattern = class Pattern extends Component {
 
@@ -15,14 +16,28 @@ let Pattern = class Pattern extends Component {
       return <p>{error.message}</p>
     }
 
+    let directions = pattern && pattern.directions ? JSON.parse(pattern.directions) : ''
+
     return (
-      <div className='pattern'>
-        <div>
-          <img alt={pattern.title} src={`${pattern.picture.url}?w=200&h=200&fit=fill`} />
+      <div className='Pattern'>
+        <div className='Pattern-header'>
           <h1>{pattern.title}</h1>
+          <h4>{`Recommended Hook Size: ${pattern.hookSize}`}</h4>
+          </div>
+        <div className='Pattern-directions'>
+          <ul>
+          {
+            directions.map( step => {
+              return (
+                <li>{step}</li>
+              )
+            }
+          )}
+          </ul>
         </div>
-        <h4>{`Recommended Hook Size: ${pattern.hookSize}`}</h4>
-        <p> {pattern.steps} </p>
+        <div className='Pattern-img'>
+          <img alt={pattern.title} src={`${pattern.picture.url}?w=400&h=400&fit=fill`} />
+        </div>
       </div>
     )
   }
@@ -33,7 +48,7 @@ const graphQLQuery = gql`
     pattern(id:$id) {
       title
       hookSize
-      steps
+      directions
       picture {
         title
         url

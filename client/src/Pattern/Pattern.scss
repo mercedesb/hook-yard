@@ -1,26 +1,38 @@
+@import 'styles/variables.scss';
+
+
 .Pattern {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row; }
+  flex-direction: row;
+}
 
 /* Refactor this into a shared component */
+
 .Pattern-header {
   align-items: center;
   width: 100%;
-  padding: 20px;
-  background-color: #e5e4df; }
+  padding: $base-spacing;
+  background-color: $gray;
+}
 
 .Pattern-img {
-  margin: 20px; }
+  margin: $base-spacing;
+}
 
 .Pattern-directions {
   flex: 1;
   font-size: 18px;
   line-height: 1.4;
-  padding: 20px 0 0 20px; }
-  .Pattern-directions ul {
+  padding: $base-spacing 0 0 $base-spacing;
+
+  ul {
     list-style-type: none;
     margin: 0;
-    padding: 0; }
-    .Pattern-directions ul li {
-      padding-bottom: 20px; }
+    padding: 0;
+
+    li {
+      padding-bottom: $base-spacing;
+    }
+  }
+}

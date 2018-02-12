@@ -1,17 +1,35 @@
 .PatternList {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+.PatternList-header {
+  display: flex;
   align-items: center;
-}
+  width: 100%;
+  padding: 20px;
+  background-color: #e5e4df; }
 
 .PatternList-item {
   display: flex;
   align-items: center;
-}
+  width: 100%;
+  margin: 20px;
+  margin-left: 20px; }
 
-.PatternList-item img {
-  margin: 40px;
-}
+.PatternList-img {
+  flex: 1; }
 
 .PatternList-detail {
+  margin-left: 20px;
+  flex: 2; }
 
-}
+.PatternList-difficulty {
+  display: flex; }
+
+.PatternList-sheep {
+  width: 40px;
+  color: #4e3d42;
+  fill: currentColor; }
+  .PatternList-sheep div {
+    width: 100%; }

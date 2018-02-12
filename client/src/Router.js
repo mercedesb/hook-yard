@@ -12,7 +12,7 @@ class NoMatch extends Component {
 export default class Router extends Component {
   render () {
     return (
-      <div className='routes-container'>
+      <div className='Router'>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns/:id' component={Pattern} />
