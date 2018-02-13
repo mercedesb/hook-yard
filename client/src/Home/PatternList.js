@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { gql, graphql } from 'react-apollo'
 import { Link } from 'react-router-dom'
 import { times } from 'lodash'
+import Header from '../_shared/Header'
 import './PatternList.css';
 import Sheep from './Sheep'
 
@@ -20,7 +21,7 @@ let PatternList = class PatternList extends Component {
 
     return (
       <div className='PatternList'>
-        <div className='PatternList-header'>
+        <Header>
           <div className='PatternList-img'></div>
           <div className='PatternList-detail'>
             <strong>Title</strong>
@@ -28,7 +29,7 @@ let PatternList = class PatternList extends Component {
           <div className='PatternList-difficulty'>
             <strong>Difficulty</strong>
           </div>
-        </div>
+        </Header>
 
         { patterns.map( pattern => {
           return (

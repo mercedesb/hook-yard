@@ -1,5 +1,9 @@
 @import 'styles/variables.scss';
 
+html, body, #root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,23 +24,9 @@ a {
   height: 100%;
 }
 
-.App-nav {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  min-width: 300px;
-  background-color: $kraft-brown;
-  padding-top: $base-spacing;
-}
-
 .App-content {
   display: flex;
   flex-direction: column;
   flex: 1 1 0%;
   background-color: $eggshell;
 }
-
-.App-logo {
-  width: 100%;
-}
-

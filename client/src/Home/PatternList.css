@@ -3,13 +3,6 @@
   flex-wrap: wrap;
   flex-direction: row; }
 
-.PatternList-header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  background-color: #e5e4df; }
-
 .PatternList-item {
   display: flex;
   align-items: center;

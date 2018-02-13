@@ -1,0 +1,17 @@
+.Post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; }
+
+/* Refactor this into a shared component */
+.Post-header {
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #e5e4df; }
+
+.Post-body {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 20px 0 0 20px; }

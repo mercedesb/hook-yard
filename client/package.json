@@ -20,8 +20,8 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "build-js": "react-scripts build",
-    "preprocess": "suitcss src/index.css build/build.css",
-    "build": "npm run preprocess && npm-run-all build-css build-js",
+    "preprocess": "suitcss src/index.css src/styles/suit.css",
+    "build": "npm-run-all build-css build-js",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

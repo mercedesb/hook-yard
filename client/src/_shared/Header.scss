@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $base-spacing;
+  background-color: $gray;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import { gql, graphql } from 'react-apollo';
+import Header from '../_shared/Header'
 import './Pattern.css';
 
 let Pattern = class Pattern extends Component {
@@ -20,10 +21,10 @@ let Pattern = class Pattern extends Component {
 
     return (
       <div className='Pattern'>
-        <div className='Pattern-header'>
+        <Header>
           <h1>{pattern.title}</h1>
           <h4>{`Recommended Hook Size: ${pattern.hookSize}`}</h4>
-          </div>
+        </Header>
         <div className='Pattern-directions'>
           <ul>
           {

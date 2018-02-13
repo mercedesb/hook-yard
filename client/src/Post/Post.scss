@@ -1,6 +1,6 @@
 @import 'styles/variables.scss';
 
-.Pattern {
+.Post {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -8,30 +8,16 @@
 
 /* Refactor this into a shared component */
 
-.Pattern-header {
+.Post-header {
   align-items: center;
   width: 100%;
   padding: $base-spacing;
   background-color: $gray;
 }
 
-.Pattern-img {
-  margin: $base-spacing;
-}
-
-.Pattern-directions {
+.Post-body {
   flex: 1;
   font-size: 18px;
   line-height: 1.4;
   padding: $base-spacing 0 0 $base-spacing;
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      padding-bottom: $base-spacing;
-    }
-  }
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { Pattern } from './Pattern/Pattern'
-import Home from './Home/Home'
+import { Pattern } from '../Pattern/Pattern'
+import { Post } from '../Post/Post'
+import Home from '../Home/Home'
 
 class NoMatch extends Component {
   render () {
@@ -16,6 +17,7 @@ export default class Router extends Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/patterns/:id' component={Pattern} />
+          <Route exact path='/posts/:id' component={Post} />
           <Route path='*' component={NoMatch} />
         </Switch>
       </div>

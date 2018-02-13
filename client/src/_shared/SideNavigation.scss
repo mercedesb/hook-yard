@@ -1,0 +1,50 @@
+@import 'styles/variables.scss';
+
+.SideNavigation {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: $kraft-brown;
+  padding-top: $base-spacing;
+  height: 100%;
+
+  &-link {
+    color: $white;
+    margin-left: $base-spacing;
+  }
+
+  &-logo{
+    width: 100%;
+  }
+
+  &-toggle {
+    cursor: pointer;
+    align-self: center;
+  }
+
+  &.is-open {
+    width: 300px;
+    min-width: 300px;
+
+    & .SideNavigation-toggle::after {
+      content: '<';
+    }
+  }
+
+  &.is-closed {
+    width: 100px;
+    min-width: 100px;
+
+    & .SideNavigation-link {
+      display: none;
+    }
+
+    & .SideNavigation-toggle::after {
+      content: '>';
+    }
+  }
+}

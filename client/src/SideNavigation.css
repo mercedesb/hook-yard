@@ -1,9 +1,0 @@
-.SideNavigation {
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  line-height: 2;
-  font-size: 24px;
-  margin-left: 20px; }
-  .SideNavigation-link {
-    color: #FFF; }
